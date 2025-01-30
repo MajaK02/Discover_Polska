@@ -1,0 +1,6 @@
+
+To run the project, depending on your system, you will need one of the following commands:
+* python3 -m http.server
+* python -m http.server
+* python3 -m http.server --bind 127.0.0.1
+* python -m http.server --bind 127.0.0.1
