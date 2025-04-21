@@ -312,16 +312,22 @@ The validation for the javascript used in this blog [in the fixtures/posts.json 
 
 
 ### Lighthouse testing
-Official lighthouse testing of the blog in Chrome Devtools revealed a 78% performance rating, which is quie low but this may be due to image sizes again, despite their compression. In the initial lighthouse assessment, the score was even lower due to images sizing for the blog posts, therefore this was compressed using Tinypng.com.
-
-However, I am very happy about the 95% accessibility rating, which means that it may recieve more traffic due to being easy to use and 'accessible'. 
+Initial lighthouse testing of the blog in Chrome Devtools revealed a 78% performance rating, which is quie low but this may be due to image sizing. In the initial lighthouse assessment, the score was even lower due to larger image sizes for the blog thumbnails/post images. To improve this, the images were compressed using Tinypng.com.
 
 ![Lighthouse](docs/readme_images/lighthouse.png)
 
-#### What was done to improve performance
+However, after making some adjustments to the python file configurations (more detailed in the section below), the lighthouse rating for performance increased to 92%, making the blog overall a lot more accessible, responsive and thought-out. 
 
+Unfortunately, the best practices ratign remained at 59% in both lighthouse reports, which, while still in the acceptable zone for lighthouse testing, still offers room for further improvement and adjustment in terms of aligning with modern website practices. 
 
-#### Future adjustments ot further improve performance
+However, I am still very happy about the 95% accessibility rating [still firmly in the 'green zone' for lighthouse], which means that it may recieve more consumer traffic due to being easy to use, accessible and still relatively quick in loading content. 
+
+![Lighthouse](docs/readme_images/lighthouse_2.png)
+
+#### Future adjustments to further improve performance
+- For future interations of this project, the post images will be compressed further to assess their impact on the lighthouse score. 
+- Having delved into the issues for the low rating, one key issue was the lack of HTTPS. There was an attempt to rectify this issue, however it does require a more in-depth knowledge of mixed contect, which I currently do not posses and am eager to rectify. 
+- The use of third-party cookies was also flagged, however this appeared to be in relation to the use of cloudinary, which was introduced by Code Institute and is therefore asusmed to not be relevant to this project at this point in time. 
 
 ### WAVE Accessibility validation
 When the project was put through the WAVE validation, it returned some contrast errors, alt-image errors and highlighted the repeatability of some of the links. The contrast was changed following a contrast checker revealed a low score for the intended color palette, all the images in my project had relevant alt-descriptors and the numbered pagination links were removed, leaving only the PREV and NEXT buttons.
@@ -333,9 +339,9 @@ However, there remains 1 issue and 1 warning for the final project, which includ
 ### CI Pep8 Linter 
 All python code was tested using the [CI Python Linter](#https://pep8ci.herokuapp.com/). 
 
+When initially testing the main settings.py, models.py and admin.py documents they returned some design errors (mainly white space errors) however these were corrected relatively quickly. However it was interesting to note that were some discrepancies between CI Python Linter (pep8's expectations) and co-pilots output when the error was questionned. 
 
-
-When the main settings.py, models.py and admin.py documents were run, they returned some deisgn errors (mainly white space errors) however these were mostly corrected, although there was some disagreement between pep8's expectations and co-pilots output when the error was questionned. 
+When this testing was repeated on all following python files, the discrepencies were gradually reduced due to recieving initial PEP8 feedback, and recieving an explanation of the error and it's requirements from co-pilot in order to accurately integrate the necessary changes. 
 
 ## Manual Testing
 
