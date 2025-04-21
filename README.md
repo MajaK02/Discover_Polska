@@ -267,12 +267,29 @@ Create a new Heroku app
 
 The live website for this project can be found at: https://capstone-project-mk-6cfa95e93b99.herokuapp.com/
 
+
+## Deployment
+- **Platform:** Heroku, with the blog being created using the Code Institute Template. 
+- **High-Level Deployment Steps:** 
+  1. Clone the repository
+  2. Set up the Heroku environment with a PostgreSQL database.
+  3. Configure environment variables for sensitive data (e.g., secret keys).
+  4. Deploy using Heroku Git or GitHub integration.
+- **Verification and Validation:**
+  - Tested the deployed application against the development environment for consistent functionality and design.
+  - Verified accessibility using tools such as Lighthouse and manual testing.
+- **Security Measures:**
+  - Sensitive data is stored in environment variables in the env.py file - this includes the secret key, database URL and Cloudinary URL .
+  - DEBUG mode is disabled [Set to False] in the production environment to enhance security.
+
+## AI Implementation and Orchestration
+
 ## Issues and Bugs
 One of the key issue during development was Heroku deployment. Repeatedly an error would pop up when the project was deployed, regarding static files. Having troubleshooted using copilot, ensured all the files were in place by going back to the Code Star blog walthought from Code Institute, the error was resolved by installing the psycopg2-binary package rather than the psycopg2 package.  
 
 
 
- ## Validation
+ ## Code Validation
 
 Testing and validation of this blog were carried out throughout the course of the project. This included regular debugging and testing using the Dev Tools provided within Chrome Browser, utilizing Copilot & Perplexity alongside using validation testing to address any code lines which needed fixing.
 
@@ -291,15 +308,20 @@ When passing through the official [Jigsaw validator](#https://jigsaw.w3.org/), t
 
 #### Javascript 
 
-The validation for javascript for the blog returned no issues, only messages regarding ES6 which for this project is acceptable. 
+The validation for the javascript used in this blog [in the fixtures/posts.json file] returned no issues, only messages regarding ES6 which for this project is acceptable. 
 
 
 ### Lighthouse testing
-Official lighthouse testing of the blog revealed a 78% performance rating, which is quie low but may be due to image sizes again, depsite thier compression. In the initial lighthouse assessment, the score was even low due to images sizing for the blog posts, therefore this was compressed using Tinypng.com.
+Official lighthouse testing of the blog in Chrome Devtools revealed a 78% performance rating, which is quie low but this may be due to image sizes again, despite their compression. In the initial lighthouse assessment, the score was even lower due to images sizing for the blog posts, therefore this was compressed using Tinypng.com.
 
 However, I am very happy about the 95% accessibility rating, which means that it may recieve more traffic due to being easy to use and 'accessible'. 
 
 ![Lighthouse](docs/readme_images/lighthouse.png)
+
+#### What was done to improve performance
+
+
+#### Future adjustments ot further improve performance
 
 ### WAVE Accessibility validation
 When the project was put through the WAVE validation, it returned some contrast errors, alt-image errors and highlighted the repeatability of some of the links. The contrast was changed following a contrast checker revealed a low score for the intended color palette, all the images in my project had relevant alt-descriptors and the numbered pagination links were removed, leaving only the PREV and NEXT buttons.
@@ -309,7 +331,145 @@ However, there remains 1 issue and 1 warning for the final project, which includ
 ![Wave](docs/readme_images/wave.png)
 
 ### CI Pep8 Linter
+All python code was tested using the CI Python Linter. 
+
 When the main settings.py, models.py and admin.py documents were run, they returned some deisgn errors (mainly white space errors) however these were mostly corrected, although there was some disagreement between pep8's expectations and co-pilots output when the error was questionned. 
+
+## Manual Testing
+
+### Notifications and feedback testing for comments
+
+| Action                                                    | Notifications and feedback for comments                | Does it work as expected? |
+| --------------------------------------------------------- | ------------------------------------------------------ | ------------------------- |
+| Logged out and looking at comments                        | It should say "log in to leave a comment"              | PASS                      |
+| Submit a comment                                          | Comment submitted and awaiting approval                | PASS                      |
+| Delete a comment                                          | Comment has been deleted!            | PASS                      |
+| Edit a comment                                    | Click a button and you are redirected to the text box | PASS                      |                  |
+| When edit button is clicked                               | The word submit changes to update                      | PASS                      |
+| Edit a comment successfully                               | Comment Updated! Notification appears                  | PASS                      |
+
+### Notifications and feedback testing for collaboration form
+
+| Action                         | Notifications and feedback for comments                                 | Does it work as expected? |
+| ------------------------------ | ----------------------------------------------------------------------- | ------------------------- |
+| Submit a collaboration request | Thanks for getting in contact! We will aim to get in touch as soon as possible. | PASS                      |
+
+### Notifications and feedback testing for register, signin and signout
+
+| Action   | Notifications and feedback for signin and out | Does it work as expected? |
+| -------- | --------------------------------------------- | ------------------------- |
+| signin   | Successfully signed in as username.           | PASS                      |
+| signout  | You have signed out.                          | PASS                      |
+| register | Successfully signed in as username.           | PASS                      |
+
+### Notifications and feedback testing for admin panel
+| Action                                                | Notifications and feedback for comments                                                         | Does it work as expected? |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------- |
+| When collaboration request is marked as read in admin | The collaborate request “Collaboration request from username” was changed successfully.         | PASS                      |
+| When a comment has been approved in admin             | The comment “Comment 'test' by 'username'” was changed successfully.                            | PASS                      |
+| When a comment is deleted by admin                    | Successfully deleted 1 comment.                                                                 | PASS                      |
+| When more than 1 comment is deleted by admin          | Successfully deleted 2 comments.                                                                | PASS                      |
+| When a blog post is confirmed in admin                  | The blog 'title' was changed successfully. | PASS                      |
+| When a blog is deleted by admin                    | Successfully deleted 1 blog post.                                                                 | PASS                      |
+                                                           | PASS                      |
+
+### Testing all links and buttons on blog
+|    | clickable link                                         | what does it do?                                              | does it work as expected? |
+| -- | ------------------------------------------------------ | ------------------------------------------------------------- | ------------------------- |
+| 1  | clickable Discover Polska logo in top left of screen | returns to blog/homepage                                   | PASS                      |
+| 2  | navbar blog link                                       | brings user to blog page                                      | PASS                      |
+| 3  | navbar about link                                      | brings user to about page                                     | PASS                      |
+| 4  | navbar register button                                 | brings user to signup page                                    | PASS                      |
+| 5  | navbar login button                                    | brings user to login page                                     | PASS                      |
+| 6  | navbar logout button                                   | brings user to a signout page                                 | PASS                      |
+| 7  | clickable blog title                                   | sends user to post detail page                                | PASS                      |
+| 8 | clickable exerpt                                       | sends user to post detail page                                | PASS                      |
+| 9 | next button                                            | sends user to next page                               | PASS                      |
+| 10 | prev button                                            | sends user to previous page                           | PASS                      |
+| 11 | footer facebook icon                                   | sends user to facebook login                                  | PASS                      |
+| 12 | footer instagram icon                                  | sends user to instagram login                                 | PASS                      |
+| 13 | footer x/twitter icon                                    | sends user to x/twitter                                      | PASS                      |
+| 14 | post detail edit button                                | changes submit to update and populates comment box            | PASS                      |
+| 15 | post detail delete button                              | sends user to a defensive are you sure page                   | PASS                      |
+| 16 | post detail submit button                              | submits a comment for approval                                | PASS                      |                 |
+| 17 | collaborate submit button                              | submits the collaborate form                                  | PASS                      |
+
+## Responsiveness
+
+- Responsiveness of features was tested using Chrome DevTools.
+
+- All features were tested for the intended look and responsiveness on iPhone SE, 375px wide, iPad Mini, 768px wide and Nest Hub Max,1280px wide. I also consistently tested the look and responsiveness down to 300px throughout development.
+
+- All features passed responsiveness testing and looked good on all devices mentioned. 
+
+- See responsive feature testing results in the table below.
+
+| item to check for responsiveness                  | index | about | book makeover | post detail logged out | post detail logged in | sign up page | sign in page | logout page | edit booking page | delete booking page | delete comment page |
+| ------------------------------------------------- | ----- | ----- | ------------- | ---------------------- | --------------------- | ------------ | ------------ | ----------- | ----------------- | ------------------- | ------------------- |
+| navbar                                            | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
+| hero image                                        | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
+| cover text                                        | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
+| tagline                                           | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
+| you are logged in as                              | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
+| arrangement of blogs (under each other on mobile) | PASS  | na    | na            | na                     | na                    | na           | na           | na          | na                | na                  | na                  |
+| blog pictures                                     | PASS  | na    | na            | PASS                   | PASS                  | na           | na           | na          | na                | na                  | na                  |
+| blog exerpts                                      | PASS  | na    | na            | na                     | na                    | na           | na           | na          | na                | na                  | na                  |
+| footer                                            | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
+| collaboration form                                | na    | PASS  | na            | na                     | na                    | na           | na           | na          | na                | na                  | na                  |
+| delete and edit buttons on comments               | na    | na    | na            | na                     | PASS                  | na           | na           | na          | na                | na                  | na                  |
+| submit and reset buttons on comment form          | na    | na    | na            | na                     | PASS                  | na           | na           | na          | na                | na                  | na                  |
+| edit and delete buttons on makeover booking       | na    | na    | PASS          | na                     | na                    | na           | na           | na          | na                | na                  | na                  |
+| appointment cards                                 | na    | na    | PASS          | na                     | na                    | na           | na           | na          | na                | na                  | na                  |
+| comment cards                                     | na    | na    | na            | PASS                   | PASS                  | na           | na           | na          | na                | na                  | na                  |
+| booking form                                      | na    | na    | PASS          | na                     | na                    | na           | na           | na          | na                | na                  | na                  |
+| sign up form                                      | na    | na    | na            | na                     | na                    | PASS         | na           | na          | na                | na                  | na                  |
+| sign in form                                      | na    | na    | na            | na                     | na                    | na           | PASS         | na          | na                | na                  | na                  |
+| edit booking form                                 | na    | na    | na            | na                     | na                    | na           | na           | na          | PASS              | na                  | na                  |
+
+## Browser compatibility
+
+ - All pages were tested for 'intended appearance' and 'responsiveness' on the following browsers; Chrome, Firefox, Safari, Edge and Opera
+
+- See browser compatibility testing results in the table below
+
+### Intended appearance on different browsers
+
+| intended appearance (on monitor) | chrome | edge | firefox | safari | opera |
+| -------------------------------- | ------ | ---- | ------- | ------ | ----- |
+| blog                             | pass   | pass | pass    | pass   | pass  |
+| about                            | pass   | pass | pass    | pass   | pass  |
+| makeover                         | pass   | pass | pass    | pass   | pass  |
+| post detail logged out           | pass   | pass | pass    | pass   | pass  |
+| post detail logged in            | pass   | pass | pass    | pass   | pass  |
+| sign up page                     | pass   | pass | pass    | pass   | pass  |
+| sign in page                     | pass   | pass | pass    | pass   | pass  |
+| logout page                      | pass   | pass | pass    | pass   | pass  |
+| edit booking page                | pass   | pass | pass    | pass   | pass  |
+| delete booking page              | pass   | pass | pass    | pass   | pass  |
+| delete comment page              | pass   | pass | pass    | pass   | pass  |
+
+### Intended responsiveness on different browsers
+
+Intended responsiveness was tested on a monitor using different browsers while constantly changing window sizes.
+
+| intended responsiveness (on monitor) | chrome | edge | firefox | safari | opera |
+| ------------------------------------ | ------ | ---- | ------- | ------ | ----- |
+| blog                                 | pass   | pass | pass    | pass   | pass  |
+| about                                | pass   | pass | pass    | pass   | pass  |
+| makeover                             | pass   | pass | pass    | pass   | pass  |
+| post detail logged out               | pass   | pass | pass    | pass   | pass  |
+| post detail logged in                | pass   | pass | pass    | pass   | pass  |
+| sign up page                         | pass   | pass | pass    | pass   | pass  |
+| sign in page                         | pass   | pass | pass    | pass   | pass  |
+| logout page                          | pass   | pass | pass    | pass   | pass  |
+| edit booking page                    | pass   | pass | pass    | pass   | pass  |
+| delete booking page                  | pass   | pass | pass    | pass   | pass  |
+| delete comment page                  | pass   | pass | pass    | pass   | pass  |
+
+## Device compatibility
+
+Throughout development the website was tested consistently using a laptop with screen size of 14 inches, a 23 inch monitor and my own in-hand iPhone 12 Pro. Multiple different devices were selected on Chrome DevTools and the window was periodically resized to check responsiveness.
+
 
 ## Future Improvements 
 When I work on this project in the future I intended to improve the styling options, improving on the Wave error of contrast colors for better visibility. Furthermore, I wish to improve the lighthouse score even more, therefore more time will be spent familiarising myself with what exactly the errors are referring to, as in some cases by limited knowledge and experience meant that more time was spent debugging than on the project itself. 
