@@ -396,75 +396,51 @@ When the main settings.py, models.py and admin.py documents were run, they retur
 
 ## Responsiveness
 
-- Responsiveness of features was tested using Chrome DevTools.
+- Responsiveness of features for this blog site were tested using Chrome DevTools and across different devices using friends and family co-operation.
 
-- All features were tested for the intended look and responsiveness on iPhone SE, 375px wide, iPad Mini, 768px wide and Nest Hub Max,1280px wide. I also consistently tested the look and responsiveness down to 300px throughout development.
+- All features were tested for the intended look and responsiveness on mobile (320px), iphone & Android mobiles (425px), tablet (768px) and across a HP 14-inch laptop (1024px) & an Acer desktop (1440px). As the blog site was designed laptop first, it's features and responsiveness was continuosly tested on larger laptop and desktop views first, followed by different mobile screen sizes. 
 
 - All features passed responsiveness testing and looked good on all devices mentioned. 
 
 - See responsive feature testing results in the table below.
 
-| item to check for responsiveness                  | index | about | book makeover | post detail logged out | post detail logged in | sign up page | sign in page | logout page | edit booking page | delete booking page | delete comment page |
+| item to check for responsiveness                  | index | about | post detail logged out | post detail logged in | sign up page | sign in page | logout page | edit booking page | delete booking page | delete comment page |
 | ------------------------------------------------- | ----- | ----- | ------------- | ---------------------- | --------------------- | ------------ | ------------ | ----------- | ----------------- | ------------------- | ------------------- |
-| navbar                                            | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
-| hero image                                        | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
+| navbar                                            | PASS  | PASS       | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
+| hero image                                        | PASS  | PASS         | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
 | cover text                                        | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
-| tagline                                           | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
+| Quote                                         | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
 | you are logged in as                              | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
 | arrangement of blogs (under each other on mobile) | PASS  | na    | na            | na                     | na                    | na           | na           | na          | na                | na                  | na                  |
 | blog pictures                                     | PASS  | na    | na            | PASS                   | PASS                  | na           | na           | na          | na                | na                  | na                  |
 | blog exerpts                                      | PASS  | na    | na            | na                     | na                    | na           | na           | na          | na                | na                  | na                  |
-| footer                                            | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
-| collaboration form                                | na    | PASS  | na            | na                     | na                    | na           | na           | na          | na                | na                  | na                  |
-| delete and edit buttons on comments               | na    | na    | na            | na                     | PASS                  | na           | na           | na          | na                | na                  | na                  |
-| submit and reset buttons on comment form          | na    | na    | na            | na                     | PASS                  | na           | na           | na          | na                | na                  | na                  |
-| edit and delete buttons on makeover booking       | na    | na    | PASS          | na                     | na                    | na           | na           | na          | na                | na                  | na                  |
-| appointment cards                                 | na    | na    | PASS          | na                     | na                    | na           | na           | na          | na                | na                  | na                  |
-| comment cards                                     | na    | na    | na            | PASS                   | PASS                  | na           | na           | na          | na                | na                  | na                  |
-| booking form                                      | na    | na    | PASS          | na                     | na                    | na           | na           | na          | na                | na                  | na                  |
+| footer                                            | PASS  | PASS         | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
+| collaboration form                                | na    | PASS                  | na                    | na           | na           | na          | na                | na                  | na                  |
+| delete and edit buttons on comments               | na    | na        | na                     | PASS                  | na           | na           | na          | na                | na                  | na                  |
+| submit buttons on comment form          | na    | na            | na                     | PASS                  | na           | na           | na          | na                | na                  | na                  |
+| comment cards                                     | na    | na    | na            | PASS                   | PASS                  | na           | na           | na          | na                | na                  | na                  |             |
 | sign up form                                      | na    | na    | na            | na                     | na                    | PASS         | na           | na          | na                | na                  | na                  |
 | sign in form                                      | na    | na    | na            | na                     | na                    | na           | PASS         | na          | na                | na                  | na                  |
-| edit booking form                                 | na    | na    | na            | na                     | na                    | na           | na           | na          | PASS              | na                  | na                  |
 
 ## Browser compatibility
 
- - All pages were tested for 'intended appearance' and 'responsiveness' on the following browsers; Chrome, Firefox, Safari, Edge and Opera
+ - All pages for Discover Polska were tested for 'intended appearance' and 'responsiveness' on the following browsers; Chrome,Edge and Brave
 
 - See browser compatibility testing results in the table below
 
-### Intended appearance on different browsers
+### Intended appearance & responsiveness on different browsers
 
-| intended appearance (on monitor) | chrome | edge | firefox | safari | opera |
-| -------------------------------- | ------ | ---- | ------- | ------ | ----- |
-| blog                             | pass   | pass | pass    | pass   | pass  |
-| about                            | pass   | pass | pass    | pass   | pass  |
-| makeover                         | pass   | pass | pass    | pass   | pass  |
-| post detail logged out           | pass   | pass | pass    | pass   | pass  |
-| post detail logged in            | pass   | pass | pass    | pass   | pass  |
-| sign up page                     | pass   | pass | pass    | pass   | pass  |
-| sign in page                     | pass   | pass | pass    | pass   | pass  |
-| logout page                      | pass   | pass | pass    | pass   | pass  |
-| edit booking page                | pass   | pass | pass    | pass   | pass  |
-| delete booking page              | pass   | pass | pass    | pass   | pass  |
-| delete comment page              | pass   | pass | pass    | pass   | pass  |
-
-### Intended responsiveness on different browsers
-
-Intended responsiveness was tested on a monitor using different browsers while constantly changing window sizes.
-
-| intended responsiveness (on monitor) | chrome | edge | firefox | safari | opera |
-| ------------------------------------ | ------ | ---- | ------- | ------ | ----- |
-| blog                                 | pass   | pass | pass    | pass   | pass  |
-| about                                | pass   | pass | pass    | pass   | pass  |
-| makeover                             | pass   | pass | pass    | pass   | pass  |
-| post detail logged out               | pass   | pass | pass    | pass   | pass  |
-| post detail logged in                | pass   | pass | pass    | pass   | pass  |
-| sign up page                         | pass   | pass | pass    | pass   | pass  |
-| sign in page                         | pass   | pass | pass    | pass   | pass  |
-| logout page                          | pass   | pass | pass    | pass   | pass  |
-| edit booking page                    | pass   | pass | pass    | pass   | pass  |
-| delete booking page                  | pass   | pass | pass    | pass   | pass  |
-| delete comment page                  | pass   | pass | pass    | pass   | pass  |
+| intended appearance  | chrome | edge | Brave |
+| -------------------------------- | ------ | ---- | ------- 
+| blog                             | pass   | pass | pass    |
+| about                            | pass   | pass | pass    |
+| post detail logged out           | pass   | pass | pass    |
+| post detail logged in            | pass   | pass | pass    |
+| sign up/register page            | pass   | pass | pass  |
+| sign in page                     | pass   | pass | pass    |
+| logout page                      | pass   | pass | pass   |
+| edit comment                | pass   | pass | pass    |
+| delete comment               | pass   | pass | pass   |
 
 ## Device compatibility
 
