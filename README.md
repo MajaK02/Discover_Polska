@@ -269,18 +269,64 @@ The live website for this project can be found at: https://capstone-project-mk-6
 
 
 ## Deployment
+
+All code for this project was written in Visual Studio integrated development environment. Github was additionally used for version control and to keep track of any changes being committed & pushed into the protected main branch, and the application was deployed to heroku from Github. 
+
 - **Platform:** Heroku, with the blog being created using the Code Institute Template. 
-- **High-Level Deployment Steps:** 
-  1. Clone the repository
-  2. Set up the Heroku environment with a PostgreSQL database.
-  3. Configure environment variables for sensitive data (e.g., secret keys).
-  4. Deploy using Heroku Git or GitHub integration.
-- **Verification and Validation:**
-  - Tested the deployed application against the development environment for consistent functionality and design.
-  - Verified accessibility using tools such as Lighthouse and manual testing.
-- **Security Measures:**
-  - Sensitive data is stored in environment variables in the env.py file - this includes the secret key, database URL and Cloudinary URL .
-  - DEBUG mode is disabled [Set to False] in the production environment to enhance security.
+
+### Pre-deplyment procedure
+- To ensure that Github and heroku are configruated correctly and make the deployment process successful, it's good practice to keep an updated requirements.txt file with the necessary installed python modules. 
+- A Procfile is required to allow heroku deployment to be configured to a gunicorn web app.
+- In settings.py configure the ALLOWED_HOSTS list to allow heroku access, alongsdie the localhost (usually you'd find this when first deploying the blog from Github onto the web), in the format ['app_name.heroku.com', 'localhost'].
+- Ensure all the necessary static files and directories are configured correctly to allow heroku to open them on the web once deployed.
+- All environment variables should be put in the env.py, including the database url, cloundinary url and secret key.
+- With the env.py file, due to the confidential nature of the infomration, it should be placed in the gitignore file, meaning that it will not be pushed onto Github. Once a new environment is opened, it will not include this information. It's good practice to make a note of these and input it manually in the new workspace. 
+
+- During production/ when working on the project, it is also good practice to disable the DEBUG mode [Set to False] in the production environment to enhance security. Once deploying the project, this should be changed to true to gather the staticfiles. 
+
+### Deploying with Heroku
+Once the project is setup, the steps to deply it from Heroku are as follows:
+- Click the "create new app" button on heroku
+- Create a unique name for the app
+- Select region (Europe was selected for this project)
+- Click "create app"
+- Select the deployment method (github was used for this project)
+- Search for the github repository name related to the project (It is good practice to keep the same name across Github & Heroku).
+- Click connect
+- There is an option to use manual deployment or automatic deployment. Make sure main branch is selected. Manual deployment was selected for this project.  
+- In the settings tab select reveal config vars. Input the required hidden variables
+- Select nodejs and python as the buildpack
+- Deploy
+- After the first deployment you will see a message saying "your app was successfully deployed" and there will be a "view" button to take you to your deployed application.
+
+### PostgreSQL Database
+This project utilised a Code Institute PostgreSQL Database (this is available only to CI students). CI students have a maximum limit of 8 databases and which are subject to deletion after 18 months. 
+
+To obtain this PostgreSQL database, the following steps were required: 
+- Sign-in to the CI LMS using the student email address. 
+- Request a new PostgreSQL database link, which was sent to the email provided. 
+
+### Forking the repository 
+By forking a repository, we mkae a copy of the original source code/ project to alter or view. However any changes we make to this forked repository will not affect the original Github repository. 
+
+To fork this repository: 
+- Log in to your Github account and locate the desired Github repository. 
+- At the top fo the repository, jsut above the 'Settings' button, locate the 'Fork' button. 
+- Once clicked, a copy of the original repositroy should now appear in your personal Github account. 
+
+
+### Cloning the repository 
+To clone this repository, you should:
+- Go to the GitHub repository
+- Click the Code button near the top of the page
+- Select 'HTTPS', 'SSH', or 'Github CLI', depending on how you would like to clone. 
+- Click the copy button to copy the URL to your clipboard
+- Open Git Bash
+- Change the current working directory to where you want the cloned directory
+- Type git clone and paste the URL ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY .)[Don't forget the . at the end in order to clone the project locally]
+- Press enter to create your clone locally
+
+  
 
 ## AI Implementation and Orchestration
 
