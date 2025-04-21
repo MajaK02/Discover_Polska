@@ -330,8 +330,10 @@ However, there remains 1 issue and 1 warning for the final project, which includ
 
 ![Wave](docs/readme_images/wave.png)
 
-### CI Pep8 Linter
-All python code was tested using the CI Python Linter. 
+### CI Pep8 Linter 
+All python code was tested using the [CI Python Linter](#https://pep8ci.herokuapp.com/). 
+
+
 
 When the main settings.py, models.py and admin.py documents were run, they returned some deisgn errors (mainly white space errors) however these were mostly corrected, although there was some disagreement between pep8's expectations and co-pilots output when the error was questionned. 
 
@@ -424,9 +426,8 @@ When the main settings.py, models.py and admin.py documents were run, they retur
 
 ## Browser compatibility
 
- - All pages for Discover Polska were tested for 'intended appearance' and 'responsiveness' on the following browsers; Chrome,Edge and Brave
+ - All pages for Discover Polska were tested for 'intended appearance' and 'responsiveness' on the following browsers; Chrome,Edge and Brave. Both these categories were successful across the three different browsers. 
 
-- See browser compatibility testing results in the table below
 
 ### Intended appearance & responsiveness on different browsers
 
@@ -442,14 +443,20 @@ When the main settings.py, models.py and admin.py documents were run, they retur
 | edit comment                | pass   | pass | pass    |
 | delete comment               | pass   | pass | pass   |
 
-## Device compatibility
-
-Throughout development the website was tested consistently using a laptop with screen size of 14 inches, a 23 inch monitor and my own in-hand iPhone 12 Pro. Multiple different devices were selected on Chrome DevTools and the window was periodically resized to check responsiveness.
-
 
 ## Future Improvements 
 When I work on this project in the future I intended to improve the styling options, improving on the Wave error of contrast colors for better visibility. Furthermore, I wish to improve the lighthouse score even more, therefore more time will be spent familiarising myself with what exactly the errors are referring to, as in some cases by limited knowledge and experience meant that more time was spent debugging than on the project itself. 
 Additionally, I intend to include a interactive map (using Javascript most likely) on which users can click on the area they are interested in and the relevant blog posts will be shown. 
+
+## Future Features
+### Personable user profiles
+- Users will be able to add profile images to create a personable and 'real' feel. 
+- users will be able to create their own 'mini' about/profile pages so that other users can see were they have travelled to previously, what they have commented on/reviewed. 
+
+### Direct Messaging 
+- Users will be able to directly message other users to ask questions or clarification on any potential travel destinations. 
+
+
 
 ## Acknowledgements
 Code, Content, Project LOs and primary learning supplied by Code Institute LMS. 
