@@ -144,7 +144,18 @@ In the screenshot below, the ERD showcases that the User has a relationship to P
 
 Prior to starting the project, I designed prospective wireframes using [Balsamiq](#https://balsamiq.com/wireframes/) to have an idea of the blog's design, layout and feature placement. Ultimately, depsite some minor changes, the project remained closely aligned with the inital wireframes. 
 
+#### Laptop view
 ![Wireframe](docs/readme_images/wireframe.png)
+
+<br>
+
+#### Mobile view
+![Wireframe](docs/readme_images/mobile_wireframe.png)
+
+<br>
+
+#### Tablet view
+![Wireframe](docs/readme_images/tablet_wireframe.png)
 
 ### Color Palette & Color contrast 
  
