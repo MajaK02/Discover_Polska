@@ -502,5 +502,10 @@ Supplemental learning resources directly used / referenced within the project:
  - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
  - [Awesome README](https://github.com/matiassingers/awesome-readme)
  - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+ - [full-stack-capstone-readme.md](https://github.com/Code-Institute-Org/html-css-project/blob/main/full-stack-capstone-readme.md)
+ 
+ Inspiration for README tables, README sections and custom models came from:
+ - [statement_beauty](https://github.com/KSDunne/statement_beauty/tree/main?tab=readme-ov-file#code)
+ - [Lens-whisperer](https://github.com/shar-nm/lens-whisperer)
 
 All other technologies and AI programmes used as referenced and acknowledged in the technology section of this READMe. 
