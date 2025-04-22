@@ -66,6 +66,7 @@ This prompt generated the necessary user stories applicable to our project desig
 * As a user, I can view a paginated list of posts so that I can select which post I want to view.
 * As a user, I want to be able to access the blog on any device (laptop or mobile).
 
+Overall, all the must-haves were included in the project as intended, and ultimately, all the user stories features were implemented within the scope of the project and successfully completed/ closed in Github Issues.  
 
 ## Technologies
 
@@ -93,21 +94,6 @@ This project was created using the following technologies:
     * whitenoise==5.3.0
 
 This ensured the project was in line with the project requirements as set out by Code Institute but also ensured that the travel blog was responsive, functional and accessible to our target audience. 
-
-### Database
-
-- [PostgreSQL from Code Institute](https://dbs.ci-dbs.net/ "link to postgresql from code institute") was used as the PostgreSQL database for this project. 
-
-### AI
-
-To further supplement the website design, I included the following AI technology and websites to aid in the creation of the initial design ideas and to debug any issues within the code.
-
-* #### [Perplexity.ai](#https://www.perplexity.ai) 
-* #### [Chat GPT](#https://chatgpt.com/)
-* #### Co-pilot (Github)
-
-Also, certain parts of the code were used from the CodeStar Blog walkthrough by Code Institute, to build the foundation of the project using Django (this is for the models i.e. Post, Comment and to ensure working CRUD functionality). The contact us form was developed from the walkthrough's Collaboration Form, however the contact us form was adapted as a custom model for this project, including additional, custom features relating to subject and destination.  
-
 
 ### Websites
 
@@ -249,37 +235,19 @@ The signout page confirms the user's actions to sign out of the blog: 'Are you s
  ![Quote](docs/readme_images/quote.png)
 
 ## Deployment
-The site was created using the Code Institute template and deployed to Heroku. The steps to deploy are as follows:
-
-* Install the gunicorn python package and create a file called 'Procfile' in the repo's root directory
-* In the Procfile write 'web: gunicorn lunar_lists.wsgi'
-* In settings.py add ".herokuapp.com" to the ALLOWED_HOSTS list
-* In settings.py add 'https://*.herokuapp.com' to CSRF_TRUSTED_ORIGINS list, git add, commit and push to github
-* Navigate to the Heroku dashboard
-
-Create a new Heroku app
-* Give it a name and select the region 'Europe' Navigate to settings tab and scroll down to Config Vars
-* Click 'Reveal Config Vars'
-* Add the following keys: key = DATABASE_URL | value = (my secret database url) key = SECRET_KEY | value = (my secret key) Navigate to Deploy tab
-* Connect to GitHub and select the repo 'lunar-lists'
-* Scroll down to 'Manual deploy' and select the 'main' branch
-* Click 'Deploy Branch'
-
-The live website for this project can be found at: https://capstone-project-mk-6cfa95e93b99.herokuapp.com/
-
-
-## Deployment
 
 All code for this project was written in Visual Studio integrated development environment. Github was additionally used for version control and to keep track of any changes being committed & pushed into the protected main branch, and the application was deployed to heroku from Github. 
 
+The live website for this project can be found at: https://capstone-project-mk-6cfa95e93b99.herokuapp.com/
+
 - **Platform:** Heroku, with the blog being created using the Code Institute Template. 
 
-### Pre-deplyment procedure
-- To ensure that Github and heroku are configruated correctly and make the deployment process successful, it's good practice to keep an updated requirements.txt file with the necessary installed python modules. 
+### Pre-deployment procedure
+- To ensure that Github and Heroku are configurated correctly and make the deployment process successful, it's good practice to keep an updated requirements.txt file with the necessary installed python modules. 
 - A Procfile is required to allow heroku deployment to be configured to a gunicorn web app.
-- In settings.py configure the ALLOWED_HOSTS list to allow heroku access, alongsdie the localhost (usually you'd find this when first deploying the blog from Github onto the web), in the format ['app_name.heroku.com', 'localhost'].
+- In settings.py configure the ALLOWED_HOSTS list to allow heroku access, alongside the localhost (usually you'd find this when first deploying the blog from Github onto the web), in the format ['app_name.heroku.com', 'localhost'].
 - Ensure all the necessary static files and directories are configured correctly to allow heroku to open them on the web once deployed.
-- All environment variables should be put in the env.py, including the database url, cloundinary url and secret key.
+- All environment variables should be put in the env.py file, including the database url, cloudinary url and secret key.
 - With the env.py file, due to the confidential nature of the infomration, it should be placed in the gitignore file, meaning that it will not be pushed onto Github. Once a new environment is opened, it will not include this information. It's good practice to make a note of these and input it manually in the new workspace. 
 
 - During production/ when working on the project, it is also good practice to disable the DEBUG mode [Set to False] in the production environment to enhance security. Once deploying the project, this should be changed to true to gather the staticfiles. 
@@ -300,7 +268,7 @@ Once the project is setup, the steps to deply it from Heroku are as follows:
 - After the first deployment you will see a message saying "your app was successfully deployed" and there will be a "view" button to take you to your deployed application.
 
 ### PostgreSQL Database
-This project utilised a Code Institute PostgreSQL Database (this is available only to CI students). CI students have a maximum limit of 8 databases and which are subject to deletion after 18 months. 
+This project utilised a [PostgreSQL database from Code Institute](https://dbs.ci-dbs.net/ "link to postgresql from code institute") (this is available only to CI students). CI students have a maximum limit of 8 databases and which are subject to deletion after 18 months. 
 
 To obtain this PostgreSQL database, the following steps were required: 
 - Sign-in to the CI LMS using the student email address. 
@@ -329,6 +297,13 @@ To clone this repository, you should:
 ## AI Implementation and Orchestration
 Throught this capstone project, various AI tools were utilised to streamline development, testing and expand my creative options of enhancing the blog's aesthetic. 
 
+The following AI technology and websites were used throughout the project to aid in the creation of the initial design ideas and to debug any issues within the code:
+* #### [Perplexity.ai](#https://www.perplexity.ai) 
+* #### [Chat GPT](#https://chatgpt.com/)
+* #### Co-pilot (Github)
+
+Also, certain parts of the code were used from the CodeStar Blog walkthrough by Code Institute, to build the foundation of the project using Django (this is for the models i.e. Post, Comment and to ensure working CRUD functionality). The contact us form was developed from the walkthrough's Collaboration Form, however the contact us form was adapted as a custom model for this project, including additional, custom features relating to subject and destination.  
+
 ### Code Creation
 - Reflection: Having some minor experience utilising AI and knoweldge of what was expected to see within the code (particularly Python code), I knew that Copilot would be used quite generously to account for my beginner's knowledge - this included generating boilerplate code, shadow-text offerring reasonable coding suggestions i.e. for Django models and CRUD functionality suggestions. 
 Using multi-step prompts llowed me to have complex code broken down into understandable chunks and improve my understanding of certain concepts - making me progressively more confident in exploring independent coding approaches or techniques. 
@@ -339,6 +314,9 @@ Using multi-step prompts llowed me to have complex code broken down into underst
 - Reflection: In terms of debugging, copilot, Chrome Devtool AI and perpelxity.Ai were all utilised to find and explain errors while offering reasonable solutions. For example, as mentionned in th testign section, for the Lighthouse score, AI offerred to explain what their feedback meant and how it could improved to increase the best practice scores. Likewise, any errors appearing within VS code could be explained using copilot. This was a very informative learning experience, as I learned common bugs or how to debug relevent issues as I went along. 
 - AI's solutions were often very reasonable, simplifing complex issues/ concepts and making it understandable to a novice developer. Additionally, most of the solutions it suggested made it accessible to any other developer who may be working on the project in the future. 
 
+#### Issues and Bugs
+One of the key issue during development was Heroku deployment. Repeatedly an error would pop up when the project was deployed, regarding static files. Having troubleshooted using copilot, ensured all the files were in place by going back to the Code Star blog walkthrough from Code Institute, the error was resolved by installing the psycopg2-binary package rather than the psycopg2 package.  
+
 ### Performance & UX Optimization
 - Reflection: Admittedly, I think UX optimisation and overall aesthetic were the areas in which AI was utilised most heavily. I had a lot of ideas and expectations on how I wanted the blog to look but lacked the knowledge of completing this. I used perplexity AI to initally provide some prospective color palettes to provide the blog vibe I wanted to go for alongside some support in Bootstrap styling. I had some issues with ensuring the blog was responsive across device sizes initially, with my posts aligning underneath each other on mobile. Copilot suggested small alterations which made the blog look professional and resonated with users through it's clean look and responsiveness. 
 
@@ -347,9 +325,6 @@ Using multi-step prompts llowed me to have complex code broken down into underst
 
 - In summary, this experience highlighted which areas remain my weak spots, which areas I stil need to focus on and build in order to develop within software development, particularly when it comes to back-end coding. However, it also improved my problem-solving skills, and ability to critically analyse an issue to come up with a potential solution - putting it into copilot to then check if it is feasible.  Above all, this experience taught me how crucial clear articulation is in software design, but also to explore new technologies and design concepts. 
 
-
-## Issues and Bugs
-One of the key issue during development was Heroku deployment. Repeatedly an error would pop up when the project was deployed, regarding static files. Having troubleshooted using copilot, ensured all the files were in place by going back to the Code Star blog walthought from Code Institute, the error was resolved by installing the psycopg2-binary package rather than the psycopg2 package.  
 
 ## Testing Summary
 - **Manual Testing:**
@@ -379,7 +354,6 @@ When passing through the official [Jigsaw validator](#https://jigsaw.w3.org/), t
 
 The validation for the javascript used in this blog [in the fixtures/posts.json file] returned no issues, only messages regarding ES6 which for this project is acceptable. 
 
-
 ### Lighthouse testing
 Initial lighthouse testing of the blog in Chrome Devtools revealed a 78% performance rating, which is quie low but this may be due to image sizing. In the initial lighthouse assessment, the score was even lower due to larger image sizes for the blog thumbnails/post images. To improve this, the images were compressed using Tinypng.com.
 
@@ -406,7 +380,7 @@ However, there remains 1 issue and 1 warning for the final project, which includ
 ![Wave](docs/readme_images/wave.png)
 
 ### CI Pep8 Linter 
-All python code was tested using the [CI Python Linter](#https://pep8ci.herokuapp.com/). 
+All python code was tested using the [CI Python Linter](https://pep8ci.herokuapp.com/). 
 
 When initially testing the main settings.py, models.py and admin.py documents they returned some design errors (mainly white space errors) however these were corrected relatively quickly. However it was interesting to note that were some discrepancies between CI Python Linter (pep8's expectations) and co-pilots output when the error was questionned. 
 
@@ -425,11 +399,11 @@ When this testing was repeated on all following python files, the discrepencies 
 | When edit button is clicked                               | The word submit changes to update                      | PASS                      |
 | Edit a comment successfully                               | Comment Updated! Notification appears                  | PASS                      |
 
-### Notifications and feedback testing for collaboration form
+### Notifications and feedback testing for contact us form
 
 | Action                         | Notifications and feedback for comments                                 | Does it work as expected? |
 | ------------------------------ | ----------------------------------------------------------------------- | ------------------------- |
-| Submit a collaboration request | Thanks for getting in contact! We will aim to get in touch as soon as possible. | PASS                      |
+| Submit a contact us request | Thanks for getting in contact! We will aim to get in touch as soon as possible. | PASS                      |
 
 ### Notifications and feedback testing for register, signin and signout
 
@@ -468,7 +442,7 @@ When this testing was repeated on all following python files, the discrepencies 
 | 14 | post detail edit button                                | changes submit to update and populates comment box            | PASS                      |
 | 15 | post detail delete button                              | sends user to a defensive are you sure page                   | PASS                      |
 | 16 | post detail submit button                              | submits a comment for approval                                | PASS                      |                 |
-| 17 | collaborate submit button                              | submits the collaborate form                                  | PASS                      |
+| 17 | contact us submit button                              | submits the contact form                                  | PASS                      |
 
 ## Responsiveness
 
@@ -478,34 +452,13 @@ When this testing was repeated on all following python files, the discrepencies 
 
 - All features passed responsiveness testing and looked good on all devices mentioned. 
 
-- See responsive feature testing results in the table below.
-
-| item to check for responsiveness                  | index | about | post detail logged out | post detail logged in | sign up page | sign in page | logout page | edit booking page | delete booking page | delete comment page |
-| ------------------------------------------------- | ----- | ----- | ------------- | ---------------------- | --------------------- | ------------ | ------------ | ----------- | ----------------- | ------------------- | ------------------- |
-| navbar                                            | PASS  | PASS       | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
-| hero image                                        | PASS  | PASS         | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
-| cover text                                        | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
-| Quote                                         | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
-| you are logged in as                              | PASS  | PASS  | PASS          | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
-| arrangement of blogs (under each other on mobile) | PASS  | na    | na            | na                     | na                    | na           | na           | na          | na                | na                  | na                  |
-| blog pictures                                     | PASS  | na    | na            | PASS                   | PASS                  | na           | na           | na          | na                | na                  | na                  |
-| blog exerpts                                      | PASS  | na    | na            | na                     | na                    | na           | na           | na          | na                | na                  | na                  |
-| footer                                            | PASS  | PASS         | PASS                   | PASS                  | PASS         | PASS         | PASS        | PASS              | PASS                | PASS                |
-| collaboration form                                | na    | PASS                  | na                    | na           | na           | na          | na                | na                  | na                  |
-| delete and edit buttons on comments               | na    | na        | na                     | PASS                  | na           | na           | na          | na                | na                  | na                  |
-| submit buttons on comment form          | na    | na            | na                     | PASS                  | na           | na           | na          | na                | na                  | na                  |
-| comment cards                                     | na    | na    | na            | PASS                   | PASS                  | na           | na           | na          | na                | na                  | na                  |             |
-| sign up form                                      | na    | na    | na            | na                     | na                    | PASS         | na           | na          | na                | na                  | na                  |
-| sign in form                                      | na    | na    | na            | na                     | na                    | na           | PASS         | na          | na                | na                  | na                  |
-
 ## Browser compatibility
 
  - All pages for Discover Polska were tested for 'intended appearance' and 'responsiveness' on the following browsers; Chrome,Edge and Brave. Both these categories were successful across the three different browsers. 
 
-
 ### Intended appearance & responsiveness on different browsers
 
-| intended appearance  | chrome | edge | Brave |
+| Intended appearance  | chrome | edge | Brave |
 | -------------------------------- | ------ | ---- | ------- 
 | blog                             | pass   | pass | pass    |
 | about                            | pass   | pass | pass    |
@@ -519,8 +472,9 @@ When this testing was repeated on all following python files, the discrepencies 
 
 
 ## Future Improvements 
-When I work on this project in the future I intended to improve the styling options, improving on the Wave error of contrast colors for better visibility. Furthermore, I wish to improve the lighthouse score even more, therefore more time will be spent familiarising myself with what exactly the errors are referring to, as in some cases by limited knowledge and experience meant that more time was spent debugging than on the project itself. 
-Additionally, I intend to include a interactive map (using Javascript most likely) on which users can click on the area they are interested in and the relevant blog posts will be shown. 
+- When I work on this project in the future I intended to improve the styling options, improving on the Wave error of contrast colors for better visibility in particular. 
+- Furthermore, I wish to improve the lighthouse score even more, therefore more time will be spent familiarising myself with what exactly the errors are referring to, as in some cases by limited knowledge and experience meant that more time was spent debugging than on the project itself. 
+- Future project iterations will also strive to develop a more complex and developed model customisation, perhaps a link to a booking site for that particular attraction. 
 
 ## Future Features
 ### Personable user profiles
@@ -536,6 +490,9 @@ Additionally, I intend to include a interactive map (using Javascript most likel
 
 ### Sub-categories of blog posts
 - I would want to create filters with subcategories of what people were interested in i.e. Specific cafes in Krakow, museums in Warszaw etc. making the blog more comprehensive. 
+
+### Improved accessibility: Language Input
+- A future feature to include in future development stages would be to include language inut options for visually imparied users, however this is a higher level coding feature which will require more time to implement correctly. 
 
 ## Acknowledgements
 Code, Content, Project LOs and primary learning supplied by Code Institute LMS. 
