@@ -250,7 +250,7 @@ The live website for this project can be found at: https://capstone-project-mk-6
 - All environment variables should be put in the env.py file, including the database url, cloudinary url and secret key.
 - With the env.py file, due to the confidential nature of the infomration, it should be placed in the gitignore file, meaning that it will not be pushed onto Github. Once a new environment is opened, it will not include this information. It's good practice to make a note of these and input it manually in the new workspace. 
 
-- During production/ when working on the project, it is also good practice to disable the DEBUG mode [Set to False] in the production environment to enhance security. Once deploying the project, this should be changed to true to gather the staticfiles. 
+- It is also good practice to disable the DEBUG mode in the production environment to enhance security. Once deploying the project, this should be changed to False.
 
 ### Deploying with Heroku
 Once the project is setup, the steps to deply it from Heroku are as follows:
