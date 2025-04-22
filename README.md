@@ -448,7 +448,6 @@ When this testing was repeated on all following python files, the discrepencies 
 | When more than 1 comment is deleted by admin          | Successfully deleted 2 comments.                                                                | PASS                      |
 | When a blog post is confirmed in admin                  | The blog 'title' was changed successfully. | PASS                      |
 | When a blog is deleted by admin                    | Successfully deleted 1 blog post.                                                                 | PASS                      |
-                                                           | PASS                      |
 
 ### Testing all links and buttons on blog
 |    | clickable link                                         | what does it do?                                              | does it work as expected? |
