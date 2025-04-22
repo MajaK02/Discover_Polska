@@ -531,7 +531,12 @@ Additionally, I intend to include a interactive map (using Javascript most likel
 ### Direct Messaging 
 - Users will be able to directly message other users to ask questions or clarification on any potential travel destinations. 
 
+### Interactive Map with pinpoint locations
+- An interactive map will be included with pinpointed locations which have been referenced by blog posts. Users will have the possibility to click the pin and recieve links to relevant blog posts. 
+- It would also be ueful for the blog to bring into other Eastern European countries, or at least those neighbouring Poland itself for variation in location and activities. 
 
+### Sub-categories of blog posts
+- I would want to create filters with subcategories of what people were interested in i.e. Specific cafes in Krakow, museums in Warszaw etc. making the blog more comprehensive. 
 
 ## Acknowledgements
 Code, Content, Project LOs and primary learning supplied by Code Institute LMS. 
