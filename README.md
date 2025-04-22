@@ -127,9 +127,9 @@ Also, certain parts of the code were used from the CodeStar Blog walkthrough by 
 * [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/") was used to validate CSS code
 * [JS Hint](https://jshint.com/) was used to validate JavaScript code
 * [Code Institute Python Linter](https://pep8ci.herokuapp.com/) was used to validate all python code
-* [Lucid Chart](#https://lucid.app/) was used to create the Entity relationship Diagram for this project.
-* [Wix] was also used to generate a logo for my blog.
-* [Coolors]
+* [Lucid Chart](https://lucid.app/) was used to create the Entity relationship Diagram for this project.
+* [Wix](https://www.wix.com/logo/maker) was also used to generate a logo for my blog.
+* [Coolors](https://coolors.co/) was used to create color schemes from provided images (for this project, it was the logo created in Wix). 
 
 ## Database Schema
 
@@ -311,7 +311,7 @@ By forking a repository, we mkae a copy of the original source code/ project to 
 
 To fork this repository: 
 - Log in to your Github account and locate the desired Github repository. 
-- At the top fo the repository, jsut above the 'Settings' button, locate the 'Fork' button. 
+- At the top fo the repository, just above the 'Settings' button, locate the 'Fork' button. 
 - Once clicked, a copy of the original repositroy should now appear in your personal Github account. 
 
 
@@ -326,14 +326,37 @@ To clone this repository, you should:
 - Type git clone and paste the URL ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY .)[Don't forget the . at the end in order to clone the project locally]
 - Press enter to create your clone locally
 
-  
-
 ## AI Implementation and Orchestration
+Throught this capstone project, various AI tools were utilised to streamline development, testing and expand my creative options of enhancing the blog's aesthetic. 
+
+### Code Creation
+- Reflection: Having some minor experience utilising AI and knoweldge of what was expected to see within the code (particularly Python code), I knew that Copilot would be used quite generously to account for my beginner's knowledge - this included generating boilerplate code, shadow-text offerring reasonable coding suggestions i.e. for Django models and CRUD functionality suggestions. 
+Using multi-step prompts llowed me to have complex code broken down into understandable chunks and improve my understanding of certain concepts - making me progressively more confident in exploring independent coding approaches or techniques. 
+
+- It was reassuring having copilot to assist with code generation, because as a novice software developer, it  elt like being assisted by a senior developer/ colleague. Additionally, it offered me perspective on how to structure my prompts to recieve raosnable answers fo not only my particular query, but making it suitable for my current coding level. 
+
+### Debugging
+- Reflection: In terms of debugging, copilot, Chrome Devtool AI and perpelxity.Ai were all utilised to find and explain errors while offering reasonable solutions. For example, as mentionned in th testign section, for the Lighthouse score, AI offerred to explain what their feedback meant and how it could improved to increase the best practice scores. Likewise, any errors appearing within VS code could be explained using copilot. This was a very informative learning experience, as I learned common bugs or how to debug relevent issues as I went along. 
+- AI's solutions were often very reasonable, simplifing complex issues/ concepts and making it understandable to a novice developer. Additionally, most of the solutions it suggested made it accessible to any other developer who may be working on the project in the future. 
+
+### Performance & UX Optimization
+- Reflection: Admittedly, I think UX optimisation and overall aesthetic were the areas in which AI was utilised most heavily. I had a lot of ideas and expectations on how I wanted the blog to look but lacked the knowledge of completing this. I used perplexity AI to initally provide some prospective color palettes to provide the blog vibe I wanted to go for alongside some support in Bootstrap styling. I had some issues with ensuring the blog was responsive across device sizes initially, with my posts aligning underneath each other on mobile. Copilot suggested small alterations which made the blog look professional and resonated with users through it's clean look and responsiveness. 
+
+## Overall Impact & Assessment of use
+- Overall, working with copilot and other AI programmes majorly streamlined my coding process, ensuring that any issues, errors or bugs could be handled effectively by myself, but also pushing my personal development through explaining why certain issues occurred. However, it is crucial to note that AI cannot be a replacement for human thought/ analysis. here were moments were the solutions being offerred were quite outlandish and overly complciated, even when the prompt specified that it should be appropriate for a junior software developer.  There were moments were the applied solutions contradicted existing code, and created additional errors which weren't present beforehand. 
+
+- In summary, this experience highlighted which areas remain my weak spots, which areas I stil need to focus on and build in order to develop within software development, particularly when it comes to back-end coding. However, it also improved my problem-solving skills, and ability to critically analyse an issue to come up with a potential solution - putting it into copilot to then check if it is feasible.  Above all, this experience taught me how crucial clear articulation is in software design, but also to explore new technologies and design concepts. 
+
 
 ## Issues and Bugs
 One of the key issue during development was Heroku deployment. Repeatedly an error would pop up when the project was deployed, regarding static files. Having troubleshooted using copilot, ensured all the files were in place by going back to the Code Star blog walthought from Code Institute, the error was resolved by installing the psycopg2-binary package rather than the psycopg2 package.  
 
-
+## Testing Summary
+- **Manual Testing:**
+  - **Devices and Browsers Tested:** Windows (Chrome, Edge, Brave), Android (Samsung Galaxy), Iphone.
+  - **Assistive Technologies:** Tested using Lighthouse in Chrome Developer Tools, with additional code validation and accessibility tested separately.
+  - **Features Tested:** CRUD operations, user authentication/ admin access, responsive design, and accessibility features.
+  - **Results:** All critical features, including accessibility checks, worked as expected. They all classified within acceptable boundaries despite minor issues. 
 
  ## Code Validation
 
